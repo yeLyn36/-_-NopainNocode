@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Jua&display=swap&subset=korean');
+
+::-webkit-scrollbar {
+  width: 0.7em;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6d6d696;
+}
+
+html{
+  overflow-x: hidden;
+  font-family: 'Jua', serif;
+}
+
+body {
+  background-image: url("../image/source_bg.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bird img{
+  width: 200px;
+  height: auto;
+}
+
+.bird {
+  z-index: -2;
+  position: fixed;
+  -webkit-animation-name: movingPara;
+  -webkit-animation-duration: 10s;
+  animation-name: movingPara;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes movingPara {
+  from { margin-left: -10%; margin-top: -200px; }
+  to { margin-left: 110%; margin-top: -650px; }
+}
+
+#sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  right: 0;
+  background-color: rgba(1, 1, 1, 0.9); /* Black*/
+  color: white;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+#sidebar .closeBtn {
+  position: absolute;
+  top: 20px;
+  font-size: 30px;
+  margin-left: -5px;
+}
+
+.logo {
+  margin: 30px;
+  padding: 50px;
+  box-sizing:border-box;
+  width:120px; 
+  height:120px;
+  border:1px;
+  background-image: url("../image/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: text-bottom
+}
+
+a {
+  padding-left: 30px;
+  padding-bottom: 30px;
+  color: rgb(179, 179, 179);
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  transition: 0.4s;
+}
+
+a:hover{  color: white; }
+
+#menu {
+  top: 60px;
+  right: 30px;
+  width:30px;
+  height:30px;
+  position: fixed;
+}
+
+#menu:hover {
+  cursor: pointer;
+}
+
+.text {
+  color: white;
+  font-weight: bold;
+  text-shadow: 3px 3px 3px rgb(48, 48, 48);
+  width: 550px;
+  margin: 180px 52%;
+  font-size: 120px; 
+  font-weight: bold;
+  text-align: left;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+}
+
+.content {
+  margin-top: 50px;
+  margin-bottom: 10%;
+  width: 1200px;
+  height: 2050px;
+  position: center fixed;
+  position: relative;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
